@@ -20,15 +20,14 @@ include('config.php');
 				<th>PRODUCT</th>
 				<th>AMOUNT</th>
 				<th>PROFIT</th>
-				<th colspan="2">Action</th>
 			</tr>
 		</thead>
 	
-		<?php 	$index = 1; 
+		<?php
+		$index = 1; 
 		while ($row = $query->fetch(PDO::FETCH_ASSOC)) { ?>
 			<tr>
-				<td><?php echo $index; 
-					$index++; ?></td>
+				<td><? echo $index++; ?></td>
 				<td><?php echo $row['product']; ?></td>
 				<td><?php echo $row['amount']; ?></td>
 				<td><?php echo $row['profit']; ?></td>
