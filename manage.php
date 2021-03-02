@@ -11,7 +11,6 @@ include('config.php');
 	<?php
 	$query = $connection->prepare("SELECT * FROM storedata");
 	$query->execute();
-	$index = 1;
 	?>
 
 	<table>
@@ -25,7 +24,8 @@ include('config.php');
 			</tr>
 		</thead>
 	
-		<?php while ($row = $query->fetch(PDO::FETCH_ASSOC)) { ?>
+		<?php 	$index = 1; 
+		while ($row = $query->fetch(PDO::FETCH_ASSOC)) { ?>
 			<tr>
 				<td><?php echo $index+++; ?></td>
 				<td><?php echo $row['product']; ?></td>
