@@ -27,7 +27,8 @@ include('config.php');
 		<?php 	$index = 1; 
 		while ($row = $query->fetch(PDO::FETCH_ASSOC)) { ?>
 			<tr>
-				<td><?php echo $index+++; ?></td>
+				<td><?php echo $index; 
+					$index++; ?></td>
 				<td><?php echo $row['product']; ?></td>
 				<td><?php echo $row['amount']; ?></td>
 				<td><?php echo $row['profit']; ?></td>
