@@ -27,12 +27,11 @@ include('config.php');
 	
 		<?php while ($row = $query->fetch(PDO::FETCH_ASSOC)) { ?>
 			<tr>
-				<td><?php echo $indexx; ?></td>
+				<td><?php echo $index+++; ?></td>
 				<td><?php echo $row['product']; ?></td>
 				<td><?php echo $row['amount']; ?></td>
 				<td><?php echo $row['profit']; ?></td>
 			</tr>
-			$index+++
 		<?php } ?>
 	</table>
 	<button class="btn" onclick="goBack()">Back</button>
